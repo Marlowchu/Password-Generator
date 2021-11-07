@@ -1,7 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var length
-var lowercase
+var lower
+var capital
+var number
+var special
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -19,14 +24,6 @@ function writePassword (params) {
 
   window.checkLenght();
 
-  lowerCase = window.prompt("lowercase Characters? (YES OR NO)");
-
-  // var upperCase = window.prompt("Uppercase Characters? (YES OR NO)");
-
-  // var specialCharacter = window.prompt("Numeric characters? (YES OR NO)");
-
-  // var specialCharacter = window.prompt("Special characters? (YES OR NO)");
-  
 }
 
 
@@ -43,22 +40,50 @@ var checkLenght = function() {
       return;
     }
 
+
   }
 
   while (128 < length || length < 8 ||length === null || isNaN (length));
 
-  // || length != Number.isInteger
+
+  lower = confirm ("lowercase Characters? ('OK' FOR YES OR 'CANCEL' FOR NO)");
+
+  capital = confirm ("Capital Characters? ('OK' FOR YES OR 'CANCEL' FOR NO)");
+
+  number = confirm ("Numbers? ('OK' FOR YES OR 'CANCEL' FOR NO)");
+
+  special = confirm ("Special Characters? ('OK' FOR YES OR 'CANCEL' FOR NO)");
+
 }
 
-  // If user pressed Cancel, immediately end function
-  // if (!userChoice) {
-  //   return;
- 
+
+    // lowercase prompt and verify
+
+  // do {
+
+  //   lowerCase = window.prompt("lowercase Characters? (YES OR NO)");
+
+  //   lowerCase = confirm ("lowercase Characters? ('OK' FOR YES OR 'CANCEL' FOR NO)")
+   
+  //   var length = window.prompt("Length of password between 8-128 characters?");
+   
+  //   if (lowerCase === null) {
+  //     return;
+  //   }
+
+  // }
+
+  // while (lowerCase != Boolean );
 
 
 
 
 
+// var upperCase = window.prompt("Uppercase Characters? (YES OR NO)");
+
+// var specialCharacter = window.prompt("Numeric characters? (YES OR NO)");
+
+// var specialCharacter = window.prompt("Special characters? (YES OR NO)");
 
 
 // GIVEN I need a new, secure password
