@@ -7,6 +7,10 @@ var number
 var special
 
 
+var lowerOption = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberOption = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var specialOption = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"]
+
 
 // Write password to the #password input
 function writePassword() {
@@ -54,6 +58,74 @@ var checkLenght = function() {
 
   special = confirm ("Special Characters? ('OK' FOR YES OR 'CANCEL' FOR NO)");
 
+  // generate password
+
+  // Math.random()
+  // lowerOption.length
+
+  var newChoice = "";  
+
+for ( var i = 0; i < length;) {
+  
+  
+  
+  if (lower) {
+    var index = Math.floor(Math.random() * lowerOption.length);
+    var Choice = lowerOption[index];
+    i++;
+    // window.alert (Choice);
+    newChoice = newChoice + Choice;
+
+    if (i==length){
+      break
+    }
+  
+  }
+ 
+  if (number) {
+    
+  var index = Math.floor(Math.random() * numberOption.length);
+  var Choice = numberOption[index];
+  i++;
+  // window.alert (Choice);
+  newChoice = newChoice + Choice;
+
+  if (i==length){
+    break
+  }
+  }
+
+  if (special) {
+    
+  var index = Math.floor(Math.random() * specialOption.length);
+  var Choice = specialOption[index];
+  i++;
+  // window.alert (Choice);
+  newChoice = newChoice + Choice;
+  if (i==length){
+    break
+  }
+  }
+
+  if (capital) {
+    
+  var index = Math.floor(Math.random() * lowerOption.length);
+  var Choice = lowerOption[index].toUpperCase();
+  i++;
+  // window.alert (Choice);
+  newChoice = newChoice + Choice;
+  if (i==length){
+    break
+  }
+  }
+  
+  if (lower == false && capital == false && number == false && special == false) {
+   newChoice = "You create an invisable password";
+    i = length
+  }
+}
+
+  var newChoice =  window.alert(newChoice)
 }
 
 
