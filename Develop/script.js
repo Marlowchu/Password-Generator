@@ -1,15 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var length
-var lower
-var capital
-var number
-var special
 
-// array of possible outcomes
-var lowerOption = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numberOption = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var specialOption = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"]
 
 
 // Write password to the #password input
@@ -21,24 +12,30 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Add event listener to generate button. when button is clicked run write password function
 generateBtn.addEventListener("click", writePassword);
 
 
-// when botton is clicked run create password function
-function writePassword (params) {
-
-  createPassword();
-
-}
-
-
 // create password function
-var createPassword = function() {
+var generatePassword = function() {
+// vars
+var length
+var lower
+var capital
+var number
+var special
+
+
+// array of possible outcomes
+var lowerOption = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberOption = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var specialOption = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"]
+
+
 
   // Ask user for lenth of password
   do {
-
+    
     length = window.prompt("Please enter a passwerd length from 8-128)");
 
     // If cancel buttom is pressed then exit function  
@@ -138,17 +135,10 @@ for ( var i = 0; i < length;) {
     }
   }
   
-  
 }
-  
-// after running for loop display what was create in the loop
-  var newChoice =  window.alert(newChoice)
+  //  return the password from the function
+  return newChoice
 }
-
-
-
-
-
 
 
 
