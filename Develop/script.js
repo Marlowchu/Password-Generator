@@ -40,7 +40,7 @@ var specialOption = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"]
 
     // If cancel buttom is pressed then exit function  
     if (length === null) {
-      return;
+      return "Canceled";
     }
 
   }
